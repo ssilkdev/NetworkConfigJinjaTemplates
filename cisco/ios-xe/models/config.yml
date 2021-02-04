@@ -1,0 +1,26 @@
+config:
+  interfaces:
+    Te1/0/1:
+      descr: "example"
+      switchport:
+        mode: access
+        vlanID: 15
+      spanningtree:
+        portfast: True
+    Te1/0/2:
+      descr: "Te1/0/2"
+      switchport:
+        mode: trunk
+        allowedVlans: 15-18
+    Te1/0/3:
+      descr: "Te1/0/3"
+      vrf: RED 
+      routed:
+        ipv4Addr: 192.168.1.1
+        ipv4Mask: 255.255.255.0
+        ipv6GlobalAddr: 2001:0DB8:0000:000b:: 
+        ipv6GlobalPrefix: 64
+        ipv6euiAddr: 2010::
+        ipv6euiPrefix: 64
+        
+
